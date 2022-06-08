@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Shuffle array</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="align-items-center">
+    <div class="container shadow-lg mt-40 mx-1 bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 mr-40">
+	
+
+<p>Array is= ["bukky" ," devon ", "joseph ", "daniel ", "sam "," david ", "trevor " ]</p>
+
+
+	
+	<button onclick="show()" class=" shadow-2xl transition ease-in-out delay-150 bg-gray-300 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300... rounded px-4 py-2 mt-4">
+		click me 
+
+	</button>
+    </div>
+	
+	<script>
+
+		// Function to shuffle the array content
+		function shuffleArray(array) {
+			for (var i = array.length - 1; i > 0; i--) {
+
+				// Generate random number
+				var j = Math.floor(Math.random() * (i + 1));
+
+				var temp = array[i];
+				array[i] = array[j];
+				array[j] = temp;
+			}
+
+			return array;
+		}
+
+		// Function to show the result
+		function show() {
+			var arr = ["bukky" ," devon ", "joseph ", "daniel ", "sam "," david ", "trevor " ]
+			var arr1 = shuffleArray(arr)
+
+			document.write("After shuffling: ", arr1)
+		}
+	</script>
+
+</body>
+
+</html>
